@@ -1,5 +1,278 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>每一步算的是谁</title><style>*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:16px}body{margin:0;background:#f4f7f8;color:#17324d;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC",sans-serif}main{max-width:860px;margin:auto;padding:20px}.home,.q,.finish{background:#fff;border-radius:18px;padding:28px;margin-bottom:18px;box-shadow:0 3px 15px #17324d0a}h1{font-size:32px;margin:0 0 16px}p{line-height:1.7}.intro,.goal{font-size:20px;margin:8px 0}.count{font-size:17px;color:#365765}.map{margin:22px 0 4px;padding-top:18px;border-top:1px solid #dae4e8}.map h2{font-size:20px;margin:0 0 12px}.route{display:flex;align-items:stretch;gap:10px}.route a,.route span{flex:1;border-radius:10px;background:#edf5f7;padding:12px;line-height:1.6;text-decoration:none;color:#315565}.route .today{background:#dfeff2;border:2px solid #176b87}.route small{display:block;font-size:12px}.route b{font-size:17px}.map .carry{display:flex;gap:16px;flex-wrap:wrap;font-size:15px;margin:12px 0 0}.carry a{color:#526b77}.qhead{display:flex;align-items:center;gap:14px;margin-bottom:18px}.tag{display:grid;place-items:center;background:#176b87;color:#fff;border-radius:10px;min-width:58px;height:46px;font-size:23px;font-weight:700}.handwriting{margin:0;font-size:17px;font-weight:600}.stem{font-size:23px;line-height:1.8;overflow-wrap:anywhere}.sourceimg{display:block;max-width:100%;max-height:390px;object-fit:contain;height:auto;margin:20px auto}.transport{display:flex;align-items:end;gap:20px;margin:16px 0}.transport figure{width:45%;text-align:center;margin:0}.transport img{width:100%;height:110px;object-fit:contain}.transport figcaption{font-size:20px}.help{margin-top:22px;border-top:1px solid #d6e2e7;padding-top:16px}.help p{font-size:20px;background:#eff6f7;padding:15px;border-radius:10px}.help details{margin-left:12px}summary{cursor:pointer;color:#176b87;font-size:18px;padding:6px 0;min-height:40px}.src{font-size:12px;color:#687c88;margin-top:22px}nav{display:flex;gap:10px;flex-wrap:wrap;border-top:1px solid #e1e9ed;padding-top:16px}nav a,nav button,.resume{border:0;border-radius:10px;padding:12px 14px;min-height:44px;font:inherit;text-decoration:none;color:#176b87;background:#edf5f7;cursor:pointer}nav .next{margin-left:auto;background:#176b87;color:white}.pause-note{color:#607683;font-size:15px}.finish{display:none}.finish:target{display:block}.resume{display:inline-block;margin:6px 0}#paused{display:none}#paused.on{display:block;background:#e9f4f3;padding:16px;border-radius:12px;margin-bottom:16px}#resume-link{display:none}@media(max-width:600px){main{padding:10px}.home,.q,.finish{padding:20px 16px}h1{font-size:27px}.stem{font-size:21px}.route{gap:6px}.route a,.route span{padding:9px 7px}.route b{font-size:15px}nav{gap:6px}nav a,nav button{font-size:14px;padding:11px 10px}}@media print{body{background:white}.q{break-inside:avoid;box-shadow:none;border-bottom:1px solid #ddd}nav,.help,#paused,.resume{display:none}.home{box-shadow:none}}.book-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:12px 0}.book-unit{padding:12px 14px;border:1px solid #dae4e8;border-radius:10px;background:#f6f8f9;color:#315565;text-decoration:none;line-height:1.5}.book-unit small{display:block;font-size:13px}.book-unit strong{display:block;font-size:17px}.book-unit.current{border:2px solid #176b87;background:#dfeff2}.book-unit em{font-style:normal;font-size:13px;color:#176b87}.book-activities{font-size:13px;color:#687c88}.map h3{font-size:18px;margin:22px 0 12px}@media(max-width:420px){.book-grid{grid-template-columns:1fr}}</style></head><body><main><section class="home" id="home"><h1>每一步算的是谁</h1><p class="goal"><b>今天：</b>认识速度，把每一步算出的数用对地方。</p><p class="count">共11道题，其中2道手写。</p><a class="resume" id="resume-link" href="#A1">继续上次停下的题</a><div class="map" id="map"><h2>数学地图</h2><div id="book-map"><h3>四年级上册 · 整册地图</h3><div class="book-grid"><div class="book-unit"><small>第一单元</small><strong>万以上数的认识</strong></div><div class="book-unit"><small>第二单元</small><strong>角的度量</strong></div><div class="book-unit"><small>第三单元</small><strong>多位数乘两位数</strong></div><a class="book-unit current" href="#unit-route" aria-current="location"><small>第四单元</small><strong>加法模型和乘法模型</strong><em>今天在这里</em></a><div class="book-unit"><small>第五单元</small><strong>平行四边形和梯形</strong></div><div class="book-unit"><small>第六单元</small><strong>条形统计图</strong></div><div class="book-unit"><small>第七单元</small><strong>复习与关联</strong></div></div><p class="book-activities">实践活动：1亿有多大 · 寻找宝藏</p></div><h3 id="unit-route">第四单元 · 今日路线</h3><div class="route"><span><small>从这里接着走</small><b>购物里的数量关系</b></span><a class="today" href="#A1"><small>今天</small><b>速度、时间与路程</b></a><span><small>接下来</small><b>数量关系综合应用</b></span></div><p class="carry"><a href="#R2">大数的近似数</a></p></div></section><div id="paused" role="status"></div><section class="q" id="A1"><header class="qhead"><span class="tag">A1</span></header><div class="stem">小红上学用了9分钟，走了675米；小明也用了9分钟，走了480米；小丽走了480米，用了6分钟。比一比，谁走得最快？</div><img class="sourceimg" src="assets/A1-例5路线.png" alt="A1原题图"><details class="help"><summary>需要帮助</summary><p>要比得公平，可以让时间相同，也可以让路程相同。你想怎样比？</p><details><summary>再给一点帮助</summary><p>把一段路程平均放进每一分钟：这一分钟走的路程，就是这里说的速度。选一种办法回题比较。</p></details></details><p class="src">题源：人教版四上数学 第66—67页 例5</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="A1">今天先到这里</button><a class="next" href="#A2">下一题</a></nav></section><section class="q" id="A2"><header class="qhead"><span class="tag">A2</span></header><div class="stem">填空我能行。</div><div class="subquestion" data-part="1"><div class="stem">（1）东东进行50米×8往返跑测试，用时2分钟，他平均每分钟跑（　）米，可以写成（　），读作（　）。</div><details class="help"><summary>需要帮助</summary><p>50米×8表示一共跑了多远？</p><details><summary>再给一点帮助</summary><p>把总路程平均分给2分钟，再把结果写成每分钟跑多远。</p></details></details></div><div class="subquestion" data-part="2"><div class="stem">（2）朵朵从家去商场，她的步行速度为60米/分，出发15分钟后，她走到了位置（　）。</div><img class="sourceimg" src="assets/book-line-2846.jpg" alt="A2原题图"><details class="help"><summary>需要帮助</summary><p>先算15分钟走了多远。图上从家到商场有几个相等的小段？</p><details><summary>再给一点帮助</summary><p>用家到商场的总路程求一小段多远，再从家出发找对应的位置。</p></details></details></div><p class="src">题源：《53天天练》25秋人教四上 第6课时 数量关系（2）第1题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="A2">今天先到这里</button><a class="next" href="#A3">下一题</a></nav></section><section class="q" id="A3"><header class="qhead"><span class="tag">A3</span></header><div class="stem">解决下面的实际问题，并和同学交流各题中有哪些数量关系。<br>（1）小林每分钟走60米，他15分钟走多少米？<br>（2）蜜蜂每秒飞行5米，飞行600米需要多长时间？</div><details class="help"><summary>需要帮助</summary><p>看清问题：要找走了多远，还是用了多久？</p><details><summary>再给一点帮助</summary><p>每分钟走同样远，几分钟的路程就合起来；要找时间，可以看总路程里有几份每秒走的路。</p></details></details><p class="src">题源：人教版四上数学 第67页 做一做第2题</p><p class="pause-note">可以休息，回来继续。</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="A3">今天先到这里</button><a class="next" href="#B1">下一题</a></nav></section><section class="q" id="B1"><header class="qhead"><span class="tag">B1</span></header><div class="stem">早上8:30，李叔叔开车从甲地出发，11:30到达乙地。出发时里程表显示2522，到达时显示2792。李叔叔从甲地开往乙地的速度是多少？下午1:30，他以同样速度从乙地出发，3:30到达丙地，乙、丙两地相距多少千米？</div><img class="sourceimg" src="assets/B1-例6仪表盘.png" alt="B1原题图"><details class="help"><summary>需要帮助</summary><p>里程表是从车辆开始使用后累计的里程，还是只记这一次？</p><details><summary>再给一点帮助</summary><p>可以把出发、到达读数看成同一条线上的两个点。这次开过的路，是两个点之间的一段；再对应这段所用的时间。</p></details></details><p class="src">题源：人教版四上数学 第67—68页 例6</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="B1">今天先到这里</button><a class="next" href="#B2">下一题</a></nav></section><section class="q" id="B2"><header class="qhead"><span class="tag">B2</span></header><div class="stem">请从下面信息中选择一组，提出一个已知时间和速度、求路程的问题，并解答。<br>①贝贝步行的速度是54米/分。<br>②佳佳从家到书店用了12分钟。<br>③贝贝13:30从家出发，13:50到电影院。<br>④佳佳家距离书店960米。<br>（1）选择的信息：（　）。（填序号）<br>（2）提出的问题：________？<br>（3）解答。</div><details class="help"><summary>需要帮助</summary><p>先读清要提出哪一种问题。你挑出的两条信息，属于同一个人吗？</p><details><summary>再给一点帮助</summary><p>先把每个人的信息分开放，再看哪一人同时给出了速度和一段可求出的时间。</p></details></details><p class="src">题源：《53天天练》25秋人教四上 第6课时 数量关系（2）第4题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="B2">今天先到这里</button><a class="next" href="#B3">下一题</a></nav></section><section class="q" id="B3"><header class="qhead"><span class="tag">B3</span></header><div class="stem">国庆节期间，小强全家去某景区游玩。他们先乘火车行驶了9小时，又换乘汽车行驶了3小时才到达景区，他们家距离该景区多少千米？</div><div class="transport"><figure><img src="assets/standard-line-136.jpg" alt="火车"><figcaption>160千米/时</figcaption></figure><figure><img src="assets/standard-line-139.jpg" alt="汽车"><figcaption>56千米/时</figcaption></figure></div><details class="help"><summary>需要帮助</summary><p>给每个时间找到它对应的交通工具。</p><details><summary>再给一点帮助</summary><p>可以分两行记：火车走的路；汽车走的路。最后回到题目问的整段路程。</p></details></details><p class="src">题源：四上第四单元达标测试卷 第六大题第3题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="B3">今天先到这里</button><a class="next" href="#C1">下一题</a></nav></section><section class="q" id="C1"><header class="qhead"><span class="tag">C1</span></header><div class="stem">胡老师家距离学校4千米，他骑自行车从家到学校，15分钟够吗？<br>胡老师说：“我骑自行车的速度是250米/分。”</div><details class="help"><summary>需要帮助</summary><p>算出的路程和学校距离，单位一样吗？</p><details><summary>再给一点帮助</summary><p>把两段路程都用米或都用千米表示，再看15分钟能走的路够不够。</p></details></details><p class="src">题源：四上第四单元达标测试卷 第六大题第1题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="C1">今天先到这里</button><a class="next" href="#C2">下一题</a></nav></section><section class="q" id="C2"><header class="qhead"><span class="tag">C2</span><p class="handwriting">手写 · 配套手写单</p></header><div class="stem">小明一家人开车从甲地到乙地，两地相距500千米，他们正在B服务区休息。甲地到A服务区115千米，A服务区到B服务区117千米。从B服务区到乙地，如果汽车每小时行驶95千米，3小时后能到达吗？</div><img class="sourceimg" src="assets/C2-练习十四第4题路线.png" alt="C2原题图"><p class="src">题源：人教版四上数学 第69页 练习十四第4题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="C2">今天先到这里</button><a class="next" href="#D2">下一题</a></nav></section><section class="q" id="D2"><header class="qhead"><span class="tag">D2</span></header><div class="stem">声音在空气中的传播速度是340米/秒，1分钟能传播（　）米。</div><p class="src">题源：四上第四单元达标测试卷 原题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="D2">今天先到这里</button><a class="next" href="#D1">下一题</a></nav></section><section class="q" id="D1"><header class="qhead"><span class="tag">D1</span><p class="handwriting">手写 · 配套手写单</p></header><div class="stem">刘叔叔从县城开车去王庄乡送化肥，去的时候速度是40千米/时，用了3小时，原路返回用了2小时。（1）从县城到王庄乡有多远？（2）返回时平均每小时行多少千米？</div><p class="src">题源：人教版四上数学 第69页 练习十四第5题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="D1">今天先到这里</button><a class="next" href="#R2">下一题</a></nav></section><section class="q" id="R2"><header class="qhead"><span class="tag">R2</span></header><div class="stem">选择我最棒。<br>（1）下面各数中，最接近68亿的是（　）。<br>A. 6789999999　B. 6799999990<br>C. 6800000002　D. 6800000020<br>（2）187□9010678≈187亿（省略亿位后面的尾数），□里可以填（　）。<br>A. 1、2、3、4或5　B. 0、1、2、3或4<br>C. 6、7、8或9　D. 5、6、7、8或9</div><p class="src">题源：《53天天练》25秋人教四上 第12课时 第4题</p><nav><a href="#map">数学地图</a><button class="pause" data-stop="R2">今天先到这里</button><a class="next" href="#finish">完成</a></nav></section><section class="finish" id="finish"><h2>今天完成了</h2><p>把手写的两道题拍照交给家长。</p><a class="resume" href="#map">回到数学地图</a></section></main><script>
-const key='math-practice-a-process-20260912-r3';const ids=["A1", "A2", "A3", "B1", "B2", "B3", "C1", "C2", "D2", "D1", "R2"];let saved=null;try{saved=localStorage.getItem(key)}catch(e){}if(ids.includes(saved)){const a=document.getElementById('resume-link');a.href='#'+saved;a.style.display='inline-block'}
-document.querySelectorAll('.pause').forEach(b=>b.addEventListener('click',()=>{const id=b.dataset.stop;try{localStorage.setItem(key,id)}catch(e){}const p=document.getElementById('paused');p.textContent='今天先到这里。下次从 '+id+' 继续。';p.classList.add('on');const a=document.getElementById('resume-link');a.href='#'+id;a.style.display='inline-block';location.hash='home'}));
-window.addEventListener('hashchange',()=>{document.querySelectorAll('details[open]').forEach(d=>d.open=false);const id=location.hash.slice(1);if(ids.includes(id)){try{localStorage.setItem(key,id)}catch(e){}}});
-</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>先看清这一段 再选择关系</title>
+  <style>
+    :root { --ink:#27313a; --muted:#66717b; --paper:#fffdf8; --teal:#147d78; --teal-soft:#e8f5f2; --gold:#d79a2b; --gold-soft:#fff4d8; --line:#dfe5e3; --lav:#f2effa; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:#edf2ef; font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; line-height:1.7; }
+    main { width:min(920px,100%); margin:0 auto; padding:24px 18px 80px; }
+    .hero,.map-card,.question-card { background:var(--paper); border:1px solid var(--line); border-radius:24px; box-shadow:0 10px 28px rgba(45,63,58,.07); }
+    .hero { padding:30px; background:linear-gradient(145deg,#fffdf8 20%,#e9f6f3); }
+    .eyebrow { color:var(--teal); font-weight:750; letter-spacing:.06em; }
+    h1 { margin:.2em 0 .35em; font-size:clamp(2rem,6vw,3.2rem); line-height:1.15; }
+    .affirmation { font-size:1.08rem; margin:0 0 18px; }
+    .today-goal { display:grid; gap:9px; background:#fff; border-left:6px solid var(--teal); border-radius:14px; padding:16px 18px; }
+    .today-goal strong { font-size:1.12rem; }
+    .count { color:var(--muted); margin:15px 0 0; }
+    .map-card { margin-top:22px; padding:26px; }
+    h2 { margin:0 0 8px; font-size:1.45rem; }
+    .map-hint { color:var(--muted); margin:0 0 18px; }
+    .book-map { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    .unit { min-height:118px; border:1px solid var(--line); border-radius:15px; padding:13px; display:flex; flex-direction:column; gap:5px; background:#fff; }
+    .unit span { width:28px; height:28px; border-radius:50%; display:grid; place-items:center; background:#eef2f1; font-weight:800; }
+    .unit strong { line-height:1.35; }
+    .unit small { color:var(--muted); }
+    .unit.current { border:2px solid var(--teal); background:var(--teal-soft); }
+    .unit.current span { color:white; background:var(--teal); }
+    .unit-route { display:grid; grid-template-columns:repeat(4,1fr); align-items:center; gap:8px; margin-top:18px; }
+    .route-step { text-align:center; padding:12px 8px; border-radius:13px; background:#f5f7f6; font-weight:700; }
+    .route-step.current { background:var(--gold-soft); outline:2px solid var(--gold); }
+    .route-arrow { display:none; }
+    .question-card { margin-top:22px; padding:26px; scroll-margin-top:20px; }
+    .question-head { display:flex; align-items:flex-start; gap:14px; }
+    .locator { flex:none; width:54px; height:54px; border-radius:16px; background:var(--ink); color:#fff; display:grid; place-items:center; font-size:1.25rem; font-weight:850; }
+    h3 { margin:0 0 4px; font-size:1.35rem; }
+    .tags { display:flex; flex-wrap:wrap; gap:7px; }
+    .tag { display:inline-block; border-radius:999px; padding:3px 10px; font-size:.82rem; font-weight:750; }
+    .tag.main { background:var(--teal-soft); color:#0c6763; }
+    .tag.optional { background:#edf0f2; color:#52606a; }
+    .tag.conditional { background:var(--lav); color:#675787; }
+    .tag.handwriting { background:var(--gold-soft); color:#825c12; }
+    .route-note { background:#f5f7f6; border-radius:12px; padding:11px 14px; color:#4d5b63; }
+    .question-text { font-size:1.14rem; margin-top:18px; }
+    .question-text p { margin:.35em 0; }
+    .response-mode { border-top:1px dashed var(--line); padding-top:14px; color:#4a565e; }
+    .problem-visual { margin:18px 0 8px; padding:12px; border-radius:16px; background:#fff; border:1px solid var(--line); }
+    .problem-visual img { display:block; width:min(100%,630px); height:auto; margin:auto; }
+    figcaption { color:var(--muted); text-align:center; font-size:.9rem; margin-top:7px; }
+    details.help { margin-top:15px; border:1px solid #ecd79e; border-radius:14px; background:#fffaf0; overflow:hidden; }
+    details.help summary { cursor:pointer; padding:13px 15px; color:#71500d; font-weight:800; }
+    .help-body { padding:0 17px 15px; }
+    .help-body ol { margin:0; padding-left:1.5em; }
+    .return { color:#665526; margin-bottom:0; }
+    .done-button { appearance:none; margin-top:18px; border:0; border-radius:12px; padding:12px 17px; font:inherit; font-weight:800; background:#e9eeec; color:#405049; cursor:pointer; }
+    .done-button[aria-pressed="true"] { background:var(--teal); color:white; }
+    .finish { margin-top:24px; padding:22px; border-radius:20px; color:#fff; background:var(--ink); }
+    .finish strong { font-size:1.15rem; }
+    @media (max-width:720px) {
+      main { padding:14px 12px 60px; }
+      .hero,.map-card,.question-card { border-radius:18px; padding:20px; }
+      .book-map { grid-template-columns:repeat(2,1fr); }
+      .unit-route { grid-template-columns:1fr; }
+      .route-step { text-align:left; }
+    }
+    @media print { body { background:#fff; } .done-button,details.help { display:none; } main { width:100%; padding:0; } .hero,.map-card,.question-card { box-shadow:none; break-inside:avoid; } }
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <div class="eyebrow">今日数学学习进程</div>
+    <h1>先看清这一段 再选择关系</h1>
+    <p class="affirmation">你已经能独立解决不少行程问题。今天继续把每个数放回正确的位置，再研究数量变化时结果怎样跟着变。</p>
+    <div class="today-goal">
+      <strong>今天的目标</strong>
+      <span>先看清每个数表示什么、属于谁和哪一段；再找谁不变、谁怎样变，最后回答原问题。</span>
+    </div>
+    <p class="count">今天计划有 12 个定位题号：A1—A4、B1—B6 共 10 道向前学，R1、R2 各补一座小桥。B6、R1 是 2 道专题手写；A3可使用普通草稿。完成A4或B4后都可以休息，累了就在当前题号停，下次接着做。</p>
+  </section>
+
+  <section class="map-card" id="map">
+    <h2>整册数学地图</h2>
+    <p class="map-hint">先看自己在整册书的哪里，再开始今天的题。</p>
+    <div class="book-map"><div class="unit "><span>1</span><strong>大数的认识</strong><small>已学，按证据间隔复查</small></div><div class="unit "><span>2</span><strong>公顷和平方千米</strong><small>后续学习</small></div><div class="unit "><span>3</span><strong>角的度量</strong><small>后续学习</small></div><div class="unit current"><span>4</span><strong>三位数乘两位数</strong><small>今天在这里</small></div><div class="unit "><span>5</span><strong>平行四边形和梯形</strong><small>后续学习</small></div><div class="unit "><span>6</span><strong>除数是两位数的除法</strong><small>后续学习</small></div><div class="unit "><span>7</span><strong>条形统计图</strong><small>后续学习</small></div><div class="unit "><span>8</span><strong>数学广角——优化</strong><small>后续学习</small></div></div>
+    <h2 style="margin-top:26px">第四单元这一步</h2>
+    <div class="unit-route" aria-label="第四单元学习路线">
+      <div class="route-step">三位数乘两位数</div>
+      <div class="route-step">速度、时间和路程<br><small>继续应用</small></div>
+      <div class="route-step current">积的变化规律<br><small>今天推进</small></div>
+      <div class="route-step">综合应用与复查</div>
+    </div>
+  </section>
+
+  
+    <article class="question-card" id="A1" data-question="A1">
+      <div class="question-head">
+        <span class="locator">A1</span>
+        <div><h3>速度、时间和路程</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>举例说明什么是速度、时间和路程。</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>口述</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>先说清是谁在运动，再说用了多久、走了多远。</li><li>最后检查速度的单位里，是否说清每分钟、每秒或每小时走多少。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="A2" data-question="A2">
+      <div class="question-head">
+        <span class="locator">A2</span>
+        <div><h3>小军和小东上学</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>小军和小东步行上学，小军的速度是72米/分，小东5分钟走了400米，谁走得更快？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>口述算式和理由</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>先看两个人现在是不是已经用同一种尺度在比较。</li><li>如果尺度不同，你可以把其中一个人的信息变成‘每1分钟走多少米’，也可以选择另一种等价办法。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="A3" data-question="A3">
+      <div class="question-head">
+        <span class="locator">A3</span>
+        <div><h3>高阿姨开车</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>甲、乙两个城市之间相距305千米。高阿姨开车从甲城到乙城，行驶了3小时，离乙城还有20千米。高阿姨开车的平均速度是多少？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>用普通草稿保留算式、单位和答句</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>只问自己：3小时对应的是全程、已经走的路，还是剩下的路？</li><li>如果仍卡住，写出：全程由‘已经走的路’和‘剩下的路’组成，再回到原题。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="R1" data-question="R1">
+      <div class="question-head">
+        <span class="locator">R1</span>
+        <div><h3>李叔叔开车</h3><div class="tags"><span class="tag conditional">补一座桥</span><span class="tag handwriting">核心手写</span></div></div>
+      </div>
+      <p class="route-note">只订正一次。能解释两个读数的差表示什么，并做完两问，就继续 R2。</p>
+      <figure class="problem-visual"><img src="assets/R1-里程表.png" alt="出发时2522和到达时2792的两个完整汽车里程表"><figcaption>先看清两次里程表读数，再读完整题目。</figcaption></figure>
+      <div class="question-text"><p>早上8:30，李叔叔开车从甲地出发，11:30到达乙地。出发时里程表显示2522，到达时显示2792。李叔叔从甲地开往乙地的速度是多少？下午1:30，他以同样速度从乙地出发，3:30到达丙地，乙、丙两地相距多少千米？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>核心手写：只订正一次，保留两问算式和单位</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>2522和2792是两个时刻的累计读数。先说清从第一个时刻到第二个时刻，哪个量发生了变化。</li><li>如果仍卡住，再想：后一次累计读数比前一次多出的部分，才是这一段路程。得到本段路程后，再找早上和下午各自用了几小时。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="A4" data-question="A4">
+      <div class="question-head">
+        <span class="locator">A4</span>
+        <div><h3>王叔叔跑步</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>王叔叔坚持每天跑步20分钟，他平均每分钟能跑300米。王叔叔一周能跑多少千米？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>口述完整算式、单位和答案</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>题目最后问的是一天还是一周？先把时间范围圈准。</li><li>算完后再看题目要的是米还是千米。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B1" data-question="B1">
+      <div class="question-head">
+        <span class="locator">B1</span>
+        <div><h3>三个月和一年</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      <p class="route-note">从这里开始研究：一个量变了，结果会怎样跟着变。先按自己的方法做。</p>
+      
+      <div class="question-text"><p>学校开展节约用水活动，前3个月共节约用水435吨。照这样计算，学校一年能节约用水多少吨？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>先口述关系，再计算并带单位回答</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>先比较：一年包含几个3个月？哪一个量跟着变，哪一个关系保持不变？</li><li>如果仍卡住，把3个月的435吨画成一块，再画同样的块直到12个月。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B2" data-question="B2">
+      <div class="question-head">
+        <span class="locator">B2</span>
+        <div><h3>莲花池改造</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>一个长方形莲花池的面积是96平方米，改造后长不变，宽由原来的8米减少到4米。改造后的莲花池的面积是多少平方米？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>说出你的想法并解答</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>长和宽里，谁没有变？8米变到4米，是原来的几分之几？</li><li>先决定面积变为原来的几分之几，再计算。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B3" data-question="B3">
+      <div class="question-head">
+        <span class="locator">B3</span>
+        <div><h3>两个因数一起变</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>两个乘数的积是45，两个乘数都扩大10倍后，积是（ ）。</p><p>A. 45　B. 450　C. 4500</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>选择并说出理由</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>这一次是一个因数变了，还是两个因数都变了？把两个变化分别记下来。</li><li>可以先试2×3，再比较20×30；用较小的整数例子检查，不要先猜选项。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B4" data-question="B4">
+      <div class="question-head">
+        <span class="locator">B4</span>
+        <div><h3>沿着已知算式变</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      
+      
+      <div class="question-text"><p>根据28×25＝700，把下面的算式填写完整。</p><p>（1）280×25＝（　）</p><p>（2）14×75＝（　）</p><p>（3）14×（　）＝700</p><p>（4）（　）×250＝7000</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>逐小问填写；每小问说说你是怎么算的</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>每一小问都重新比较两个因数和积，不要把上一问的变化直接搬过来。</li><li>遇到空着的因数时，先看积有没有变，再判断另一个因数要怎样补回去。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B5" data-question="B5">
+      <div class="question-head">
+        <span class="locator">B5</span>
+        <div><h3>比较两种方法</h3><div class="tags"><span class="tag main">向前学</span></div></div>
+      </div>
+      <p class="route-note">这题已经给出两种方法。任选一种，用自己的话解释清楚就可以。</p>
+      <figure class="problem-visual"><img src="assets/B5-候机区40米图.jpg" alt="候机区原来长40米的长方形示意图"><figcaption>原来的候机区长40米。下面两种方法都是原题的一部分。</figcaption></figure>
+      <div class="question-text"><p>机场的候机区原来是一个面积是1200平方米的长方形。为满足旅客增长的需求，机场对候机区进行扩建，长增加到80米，宽不变。聪聪和明明用不同的方法算出了扩建后候机区的面积，你喜欢谁的方法？请解释一下他的思考过程。</p><p>聪聪：1200÷40＝30（米），30×80＝2400（平方米）。</p><p>明明：80÷40＝2，1200×2＝2400（平方米）。</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>看原图，选择一种方法，用自己的话讲清每一步算的是谁</p>
+      
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="B6" data-question="B6">
+      <div class="question-head">
+        <span class="locator">B6</span>
+        <div><h3>草坪增加了多少</h3><div class="tags"><span class="tag main">向前学</span><span class="tag handwriting">核心手写</span></div></div>
+      </div>
+      <p class="route-note">这是今天积变化关系的最后一道应用。先独立完成，再决定要不要打开帮助。</p>
+      
+      <div class="question-text"><p>游乐场准备扩建一块长方形草坪，这块草坪原来的面积是540平方米，宽是9米。如果长不变，宽增加27米，草坪的面积增加多少平方米？</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>核心手写：保留自己的算式、单位和答句</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>‘宽增加27米’说的是现在的宽，还是比原来多出的部分？先把这句话分清。</li><li>如果仍卡住，先写：原宽＋增加的宽＝现在的宽；最后检查题目问的是现在的面积还是增加的面积。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+    <article class="question-card" id="R2" data-question="R2">
+      <div class="question-head">
+        <span class="locator">R2</span>
+        <div><h3>选择信息提出问题</h3><div class="tags"><span class="tag conditional">补一座桥</span></div></div>
+      </div>
+      <p class="route-note">只订正一次。让原题要求管住选择，完成后今天就结束。</p>
+      
+      <div class="question-text"><p>请从下面信息中选择一组，提出一个已知时间和速度、求路程的问题，并解答。</p><p>①贝贝步行的速度是54米/分。</p><p>②佳佳从家到书店用了12分钟。</p><p>③贝贝13:30从家出发，13:50到电影院。</p><p>④佳佳家距离书店960米。</p><p>（1）选择的信息：________。（填序号）</p><p>（2）提出的问题：________？</p><p>（3）解答。</p></div>
+      <p class="response-mode"><strong>怎么完成：</strong>口述选择、问题和解答</p>
+      <details class="help"><summary>需要时再打开帮助</summary><div class="help-body"><ol><li>回到原题第一句：它要求你提出的是求速度、求时间，还是求路程的问题？</li><li>如果确实混了人物，再检查你选的两条信息是不是同一个人的。</li><li>人物一致后，再检查选的信息是否正好给出了时间和速度。</li></ol><p class="return">看完后收起帮助，回到原题，用自己的话继续。</p></div></details>
+      <button class="done-button" type="button" aria-pressed="false">完成这一题</button>
+    </article>
+    
+
+  <section class="finish">
+    <strong>做到这里就结束今天的进程。</strong>
+    <div>如果累了、烦了或卡住了，可以停在当前题号，下次从这里继续；今天不临时加题。</div>
+  </section>
+</main>
+<script>
+  const storageKey = "math-practice-a-20260913-segment-meaning-v3";
+  const saved = JSON.parse(localStorage.getItem(storageKey) || "{}");
+  document.querySelectorAll(".question-card").forEach(card => {
+    const id = card.dataset.question;
+    const button = card.querySelector(".done-button");
+    if (saved[id]) { button.setAttribute("aria-pressed", "true"); button.textContent = "已完成"; }
+    button.addEventListener("click", () => {
+      const pressed = button.getAttribute("aria-pressed") === "true";
+      button.setAttribute("aria-pressed", String(!pressed));
+      button.textContent = pressed ? "完成这一题" : "已完成";
+      saved[id] = !pressed;
+      localStorage.setItem(storageKey, JSON.stringify(saved));
+    });
+  });
+</script>
+</body>
+</html>
